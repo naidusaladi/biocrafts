@@ -6,14 +6,16 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import './Nav.css'
 function BNavbar() {
   return (
+    
     <Navbar expand="lg" className="bg-body-tertiary" style={{position:"fixed",zIndex:"1",width:"100%"}}>
-      <Container fluid>
+      <Container fluid >
         <Navbar.Brand href="#">BioCrafts</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
+          <div className='navItems'>
           <Nav
             className="me-auto my-2 my-lg-10"
             style={{ maxHeight: '250px' }}
@@ -34,7 +36,8 @@ function BNavbar() {
             </NavDropdown>
 
           </Nav>
-          <Form className="d-flex">
+          </div>
+          {/* <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -42,7 +45,7 @@ function BNavbar() {
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
